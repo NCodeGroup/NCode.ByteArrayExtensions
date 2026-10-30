@@ -1,4 +1,15 @@
-﻿# Overview
+﻿# Deprecated
+
+> **This library is retired. What it did is built into .NET.**
+>
+> - `ToHex(prefix, uppercase)` becomes `Convert.ToHexString(bytes)` (upper case, .NET 5 and later) or `Convert.ToHexStringLower(bytes)` (.NET 9 and later), with `"0x" + ...` for the prefix. `Convert.FromHexString` goes the other way.
+> - Comparing the contents of two arrays becomes `ReadOnlySpan<byte>.SequenceEqual`, or `CryptographicOperations.FixedTimeEquals` when the bytes are secret.
+>
+> It targeted .NET Framework 4.5 and .NET Standard 1.1, which Microsoft no longer supports.
+>
+> The NuGet package is deprecated (`NCode.ByteArrayExtensions`) and this repository is archived. The code stays available as it is.
+
+# Overview
 Provides extension methods for byte arrays such as converting to hexadecimal and comparing array contents.
 
 Target Frameworks:
